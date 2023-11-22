@@ -1,9 +1,14 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, Center, Bold } from "@chakra-ui/react";
 
 const SignUp = () => {
   return (
     <div>
-      <Heading as="h1">Sign Up Page</Heading>
+      <Center>
+        <Heading as="h1">
+          <Bold>Log in</Bold> or <Bold>Sign up</Bold> to the Eccsen Volunteer
+          Connector
+        </Heading>
+      </Center>
     </div>
   );
 };
