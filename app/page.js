@@ -1,5 +1,7 @@
+// This is the index page
+
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./styles/globals.css";
 import Recommendations from "./Recommendation";
 import { VStack, Center } from "@chakra-ui/layout";
 

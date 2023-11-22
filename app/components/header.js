@@ -1,11 +1,10 @@
-"use client";
-
 import { Link, Button, Image } from "@chakra-ui/react";
 import { Flex } from "@chakra-ui/react";
 import { Spacer, Box } from "@chakra-ui/react";
 export const Header = () => {
+  const title = "Eccsen Career School";
   return (
-    <Flex>
+    <Flex padding={8}>
       <Image
         src="/assets/logo.png"
         position="absolute"
@@ -15,7 +14,7 @@ export const Header = () => {
         pointerEvents="none"
         alt="eccsen-logo"
       />
-      Eccsen Career School
+      {title}
       <Spacer />
       <Box m={3}>
         <Link href="/signup">
