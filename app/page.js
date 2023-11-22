@@ -4,7 +4,7 @@ import Recommendations from "./Recommendation";
 import { VStack, Center } from "@chakra-ui/layout";
 
 import { Header } from "./components/header";
-import { Center, Heading } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 export default function Home() {
   return (
     <div>
