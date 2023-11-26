@@ -3,7 +3,7 @@ import { Button, Heading, Input, Text, VStack } from "@chakra-ui/react";
 const EmailSubmitCard = ({ rest }) => {
   return (
     <VStack {...rest}>
-      <Heading as="h3" fontSize={16}>
+      <Heading as="h3" fontSize={24}>
         with your email
       </Heading>
       <Text fontStyle={"italic"} maxW={"550px"}>

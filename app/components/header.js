@@ -1,20 +1,17 @@
-import { Link, Button, Image } from "@chakra-ui/react";
-import { Flex } from "@chakra-ui/react";
+import { Link, Button, Flex } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import { Spacer, Box } from "@chakra-ui/react";
 export const Header = () => {
-  const title = "Eccsen Career School";
   return (
-    <Flex padding={8}>
+    <Flex padding={8} bg={"white"}>
+      <Spacer />
       <Image
-        src="/assets/logo.png"
-        position="absolute"
+        src="https://ecssen.ca/wp-content/uploads/2022/12/Your-paragraph-text-3.png"
         top={0}
         right={0}
-        width="55%"
         pointerEvents="none"
         alt="eccsen-logo"
       />
-      {title}
       <Spacer />
       <Box m={3}>
         <Link href="/signup">
