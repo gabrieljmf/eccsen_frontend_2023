@@ -1,5 +1,4 @@
 // This is the index page
-
 import Recommendations from "./Recommendation";
 
 import { Header } from "./components/header";
