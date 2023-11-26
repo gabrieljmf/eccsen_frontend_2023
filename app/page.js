@@ -1,12 +1,13 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Recommendations from "./Recommendation";
-import { VStack, Center } from "@chakra-ui/layout";
+// This is the index page
 
+import Recommendations from "./Recommendation";
+
+import { Header } from "./components/header";
 export default function Home() {
   return (
-    <>
+    <div>
+      <Header />
       <Recommendations />
-    </>
+    </div>
   );
 }
