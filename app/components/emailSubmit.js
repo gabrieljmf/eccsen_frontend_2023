@@ -1,4 +1,4 @@
-import { Button, Heading, Input, Text, VStack } from "@chakra-ui/react";
+import { Button, Heading, Input, Text, VStack, Link } from "@chakra-ui/react";
 
 const EmailSubmitCard = ({ rest }) => {
   return (
@@ -12,7 +12,9 @@ const EmailSubmitCard = ({ rest }) => {
       </Text>
       <Input placeholder="Email" />
       <Text>By signing in you agree to our privacy policy.</Text>
-      <Button>Next --&gt;</Button>
+      <Link href="/addCauses">
+        <Button>Next</Button>
+      </Link>
     </VStack>
   );
 };
