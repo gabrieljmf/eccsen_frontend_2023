@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import React from 'react';
 import {
     Box,
@@ -100,39 +99,32 @@ const activitiesData = [
 
 
 const ActivitiesPage = () => {
-      const [selectedActivities, setSelectedActivities] = useState([]);
-
-    // Function to handle selecting/deselecting all checkboxes in a category
-    const handleSelectAll = (category, details) => {
-        setSelectedActivities((prevSelected) => {
-            const newSelected = { ...prevSelected };
-            if (newSelected[category]?.length === details.length) {
-                // All items are selected, so deselect all
-                newSelected[category] = [];
-            } else {
-                // Not all items are selected, so select all
-                newSelected[category] = details;
-            }
-            return newSelected;
-        });
-    };
-
-    // Function to handle individual checkbox toggle
-    const handleCheckboxChange = (category, detail) => {
-        setSelectedActivities((prevSelected) => {
-            const newSelected = { ...prevSelected };
-            if (newSelected[category]?.includes(detail)) {
-                newSelected[category] = newSelected[category].filter((item) => item !== detail);
-            } else {
-                newSelected[category] = [...(newSelected[category] || []), detail];
-            }
-            return newSelected;
-        });
-    };
+    //   const [selectedActivities, setSelectedActivities] = useState([]);
 
     return (
         <Container maxW="container.xl" p={5} bg="white">
+
+            <Flex
+                bg="white"
+                p={4}
+                justifyContent="space-between"
+                alignItems="center"
+                borderBottomWidth={1}
+                borderColor="gray.200"
+            >
+                <Box>
+                    <Link href="/browse-opportunities" _hover={{ textDecoration: "none" }} color="black">
+                        <Text fontSize="xl" fontWeight="bold">Browse Opportunities</Text>
+                    </Link>
+                </Box>
+                <Box>
+                    <Link href="/dashboard" _hover={{ textDecoration: "none" }} color="black">
+                        <Text fontSize="xl" fontWeight="bold">Dashboard</Text>
+                    </Link>
+                </Box>
+            </Flex>
             <Flex direction={{ base: 'column', md: 'row' }}>
+
                 {/* Sidebar */}
                 <VStack
                     w="20%"
@@ -158,44 +150,48 @@ const ActivitiesPage = () => {
                 </VStack>
 
                 {/* Main content */}
-                <VStack w={{ base: 'full', md: '80%' }} p={5} spacing={5} color="black" bg="white">
-      <Heading mb={4}>Activities</Heading>
-      <Text mb={8}>
-        What would you like to do? Choose some Activities that you are interested in so that we can show you opportunities that match.
-      </Text>
-      {activitiesData.map((category, index) => (
-        <Accordion allowToggle key={index}>
-          <AccordionItem border="none">
-            <AccordionButton>
-              <Box flex="1" textAlign="left">
-                {category.category}
-              </Box>
-              <Checkbox
-                isChecked={selectedActivities[category.category]?.length === category.details.length}
-                onChange={() => handleSelectAll(category.category, category.details)}
-              />
-              <AccordionIcon />
-            </AccordionButton>
-            <AccordionPanel pb={4}>
-              <Stack pl={6} mt={1} spacing={1}>
-                {category.details.map((detail) => (
-                  <Checkbox
-                    key={detail}
-                    isChecked={selectedActivities[category.category]?.includes(detail)}
-                    onChange={() => handleCheckboxChange(category.category, detail)}
-                  >
-                    {detail}
-                  </Checkbox>
-                ))}
-              </Stack>
-            </AccordionPanel>
-          </AccordionItem>
-        </Accordion>
-      ))}
-      <Button alignSelf="flex-end" mt={4} colorScheme="blue" size="lg">
-        Update
-      </Button>
-    </VStack>
+                <VStack
+                    w={{ base: 'full', md: '80%' }}
+                    p={5}
+                    spacing={5}
+                    color="black"
+                    bg="white"
+                >
+                    <Heading mb={4} color="black">Activities</Heading>
+                    <Text mb={8} color="black">
+                        What would you like to do? Choose some Activities that you are interested in so that we can show you opportunities that match.
+                    </Text>
+                    <CheckboxGroup colorScheme="red">
+                        <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }} gap={6}>
+                            {activitiesData.map((activity, index) => (
+                                <GridItem key={index}>
+                                    <Accordion allowToggle defaultIndex={[0]}>
+                                        <AccordionItem border="none">
+                                            <AccordionButton _expanded={{ bg: 'gray.100', borderRadius: 'md' }}>
+                                                <Box flex="1" textAlign="left">
+                                                    {activity.category}
+                                                </Box>
+                                                <AccordionIcon />
+                                            </AccordionButton>
+                                            <AccordionPanel pb={4} bg="white">
+                                                <Stack pl={6} mt={1} spacing={1}>
+                                                    {activity.details.map((detail) => (
+                                                        <Checkbox key={detail} value={detail} colorScheme="red">
+                                                            {detail}
+                                                        </Checkbox>
+                                                    ))}
+                                                </Stack>
+                                            </AccordionPanel>
+                                        </AccordionItem>
+                                    </Accordion>
+                                </GridItem>
+                            ))}
+                        </Grid>
+                    </CheckboxGroup>
+                    <Button alignSelf="flex-end" mt={4} colorScheme="red" size="lg">
+                        Update
+                    </Button>
+                </VStack>
             </Flex>
         </Container>
     );
