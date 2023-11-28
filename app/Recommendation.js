@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Card,
   CardHeader,
@@ -15,11 +16,27 @@ import {
   FormControl,
   FormLabel,
   Flex,
+  Link,
 } from "@chakra-ui/react";
 
 const Recommendations = () => {
   return (
     <>
+
+      <Flex bg="gray.100" p={4} justifyContent="flex-start" alignItems="center">
+        <Box mr={8}> {/* Add margin to space out links */}
+          <Link href="/app/Recommendation.js" _hover={{ textDecoration: "none" }} color="black">
+            <Text fontSize="xl" fontWeight="bold">Browse Opportunities</Text>
+          </Link>
+        </Box>
+        <Box>
+          <Link href="/app/Dashboard.js" _hover={{ textDecoration: "none" }} color="black">
+            <Text fontSize="xl" fontWeight="bold">Dashboard</Text>
+          </Link>
+        </Box>
+      </Flex>
+
+
       <VStack bgGradient="linear(to-l, #c2e8fc, #ebf8ff)">
         <Text fontSize="4xl" color="black" mt={10}>
           Recommended For You:
