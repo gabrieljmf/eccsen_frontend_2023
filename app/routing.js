@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
-import Dashboard from './Dashboard'; // assuming Dashboard.js is in the same directory
+import Dashboard from './profile/page'; // assuming Dashboard.js is in the same directory
 // ... other imports
 
 function App() {
