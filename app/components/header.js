@@ -17,6 +17,12 @@ export const Header = () => {
       <Link href="/" p={1}>
           <Button>Home</Button>
         </Link>
+        <Link href="/profile" p={1}>
+          <Button>Profile</Button>
+        </Link>
+        <Link href="/survey" p={1}>
+          <Button>Survey</Button>
+        </Link>
         <Link href="/calendar" p={1}>
           <Button>Calendar</Button>
         </Link>
