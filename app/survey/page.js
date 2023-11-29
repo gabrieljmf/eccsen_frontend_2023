@@ -107,29 +107,10 @@ const ActivitiesPage = () => {
       <Header/>
         <Container maxW="container.xl" p={5} bg="white">
 
-            <Flex
-                bg="white"
-                p={4}
-                justifyContent="space-between"
-                alignItems="center"
-                borderBottomWidth={1}
-                borderColor="gray.200"
-            >
-                <Box>
-                    <Link href="/browse-opportunities" _hover={{ textDecoration: "none" }} color="black">
-                        <Text fontSize="xl" fontWeight="bold">Browse Opportunities</Text>
-                    </Link>
-                </Box>
-                <Box>
-                    <Link href="/dashboard" _hover={{ textDecoration: "none" }} color="black">
-                        <Text fontSize="xl" fontWeight="bold">Dashboard</Text>
-                    </Link>
-                </Box>
-            </Flex>
             <Flex direction={{ base: 'column', md: 'row' }}>
 
                 {/* Sidebar */}
-                <VStack
+                {/* <VStack
                     w="20%"
                     bg="gray.50"
                     p={5}
@@ -149,8 +130,7 @@ const ActivitiesPage = () => {
                     <Link p={2} _hover={{ bg: "gray.100" }} borderRadius="md">Organizations</Link>
 
 
-                    {/* Add more sidebar items */}
-                </VStack>
+                </VStack> */}
 
                 {/* Main content */}
                 <VStack

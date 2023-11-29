@@ -20,26 +20,7 @@ const Dashboard = () => {
     <Header/>
     <Container maxW="container.xl" p={0}>
       <Flex direction="column" h="100vh">
-        {/* Top Navigation */}
-        <Flex
-          bg="white"
-          p={4}
-          justifyContent="space-between"
-          alignItems="center"
-          borderBottomWidth={1}
-          borderColor="gray.200"
-        >
-          <Box>
-            <Link href="/browse-opportunities" _hover={{ textDecoration: "none" }} color="black">
-              <Text fontSize="xl" fontWeight="bold">Browse Opportunities</Text>
-            </Link>
-          </Box>
-          <Box>
-            <Link href="/dashboard" _hover={{ textDecoration: "none" }} color="black">
-              <Text fontSize="xl" fontWeight="bold">Dashboard</Text>
-            </Link>
-          </Box>
-        </Flex>
+
 
         {/* Main Content */}
         <Flex flex={1}>
