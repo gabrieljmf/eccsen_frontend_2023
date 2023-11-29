@@ -49,10 +49,13 @@ const mockVolunteerHistory = [
 
 import React from 'react';
 import { Box, Button, Input, Table, Thead, Tbody, Tr, Th, Td, Text, Stack, Flex } from '@chakra-ui/react';
+import { Header } from "../components/header";
 
 
 const VolunteerHistoryPage = () => {
   return (
+    <div>
+    <Header />
     <Box p={5}>
       <Box border="1px" bg="white" borderColor="gray.300" borderRadius="md" p={3} mb={4}>
         <Text fontSize="2xl">Volunteer History</Text>
@@ -91,6 +94,7 @@ const VolunteerHistoryPage = () => {
         </Tbody>
       </Table>
     </Box>
+    </div>
   );
 };
 

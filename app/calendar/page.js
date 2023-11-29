@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Flex, Text, Button, Select } from "@chakra-ui/react";
+import { Header } from "../components/header";
 
 const mockEvents = [
   {
@@ -309,7 +310,9 @@ const Page = () => {
   }
 
   return (
-    <Box maxWidth="1400px" m="auto" p={10} bg="white" borderRadius="lg">
+    <div>
+    <Header/>
+    <Box maxWidth="1400px" m="133" p={10} bg="white" borderRadius="lg">
       {renderTopSection()}
       {renderDateFilterSection()}
       <Box borderRadius="lg" border="1px" borderColor="gray.200" p={0}>
@@ -319,6 +322,7 @@ const Page = () => {
         {generateDays()}
       </Box>
     </Box>
+    </div>
   );
 };
 export default Page;

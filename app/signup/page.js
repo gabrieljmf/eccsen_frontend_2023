@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import EmailSubmitCard from "../components/emailSubmit";
 import OAuthCard from "../components/oAuthCard";
+import { Header } from "../components/header";
 
 // async function getUsers() {
 //   const res = await fetch("https://localhost:3000/api/databases/users");
@@ -27,6 +28,8 @@ import OAuthCard from "../components/oAuthCard";
 const SignUp = async () => {
   // const users = await getUsers();
   return (
+    <div>
+    <Header />
     <Box padding={8} bg="grey">
       <Center paddingBottom={12}>
         <Heading as="h1">
@@ -46,6 +49,7 @@ const SignUp = async () => {
         </Box>
       ))} */}
     </Box>
+    </div>
   );
 };
 
