@@ -6,7 +6,6 @@ import {
     VStack,
     Heading,
     Text,
-    Link,
     Button,
     Container,
     Accordion,
@@ -95,7 +94,7 @@ const activitiesData = [
         category: 'Social Care',
         details: ['Counselling', 'Mediation', 'Mentoring', 'Peer Support', 'Settlement', 'Social Work', 'Telephone Counselling'],
     },
-    // Add additional categories and details as needed
+
 ];
 
 
@@ -108,29 +107,6 @@ const ActivitiesPage = () => {
         <Container maxW="container.xl" p={5} bg="white">
 
             <Flex direction={{ base: 'column', md: 'row' }}>
-
-                {/* Sidebar */}
-                {/* <VStack
-                    w="20%"
-                    bg="gray.50"
-                    p={5}
-                    borderRightWidth={1}
-                    borderColor="gray.20"
-                    spacing={4}
-                    align="stretch"
-                    color="black"
-                >
-                    <Link p={2} _hover={{ bg: "gray.100" }} borderRadius="md">Home</Link>
-                    <Link p={2} _hover={{ bg: "gray.100" }} borderRadius="md">Your Profile</Link>
-                    <Divider borderColor="gray.300" />
-
-                    <Link p={2} _hover={{ bg: "gray.100" }} borderRadius="md">Activities</Link>
-                    <Link p={2} _hover={{ bg: "gray.100" }} borderRadius="md">Causes</Link>
-                    <Link p={2} _hover={{ bg: "gray.100" }} borderRadius="md">Preferences</Link>
-                    <Link p={2} _hover={{ bg: "gray.100" }} borderRadius="md">Organizations</Link>
-
-
-                </VStack> */}
 
                 {/* Main content */}
                 <VStack
