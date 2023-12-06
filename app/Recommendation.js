@@ -154,7 +154,7 @@ const Recommendations = () => {
         <HStack>
           <FormControl mx={10} mb={10}>
             <FormLabel color="black" as="b">
-              I$apos;m Interested In:
+              I'm Interested In:
             </FormLabel>
             <Select
               variant="outline"
@@ -183,10 +183,7 @@ const Recommendations = () => {
             </Select>
           </FormControl>
         </HStack>
-        <Flex w="80%" h="100vh" m={10}>
-          <Box w="20%" bg="#cccccc">
-            <Text color="black">Filter</Text>
-          </Box>
+        <Flex w="80%" h="100vh" m={10} justifyContent={"Center"}>
           <Box id="opportunities" w="80%">
             <SimpleGrid m={4} columns={2} spacing={4}>
               {cardData.map((card) => (
