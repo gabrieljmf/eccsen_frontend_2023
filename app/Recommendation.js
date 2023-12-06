@@ -154,7 +154,7 @@ const Recommendations = () => {
         <HStack>
           <FormControl mx={10} mb={10}>
             <FormLabel color="black" as="b">
-              I'm Interested In:
+              I am Interested In:
             </FormLabel>
             <Select
               variant="outline"
